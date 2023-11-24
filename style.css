@@ -1,0 +1,74 @@
+/*
+Theme Name: LearningWordPress
+Author: Quintino Medeiros
+Autor URL: https://quitinomedeiros.com.br
+Version 1.0
+*/
+
+:root {
+    --cor-vermelho-escuro: #220C10;
+    --cor-marrom-escuro: #574144;
+    --cor-marrom-claro: #BEA5A8;
+    --cor-verde-escuro: #052D28;
+    --cor-verde-medio: #506C64;
+    --cor-verde-claro: #77CBB9;
+    --cor-azul-escuro: #172648;
+    --cor-azul-medio: #00324B;
+    --cor-azul-claro: #75B8C8;
+    --cor-cinza-medio:#CDD3D5;
+    --cor-preto:#181300;
+    --cor-rosa-claro: #FFF5F7;
+    --cor-branco: #FFF;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    color: var(--cor-preto);
+}
+
+.site-header {
+    background-color: var(--cor-marrom-claro);
+    margin: 0;
+    padding: 1rem;
+    border-bottom: 3px solid var(--cor-vermelho-escuro);
+}
+
+a:link,
+a:visited {
+    color: var(--cor-azul-medio);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--cor-verde-medio);
+    cursor: pointer;
+}
+
+p {
+    line-height: 1.65em;
+}
+
+/* General Layout */
+main.container {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+article.post {
+    margin: 1rem 0;
+    border-bottom: 1px solid var(--cor-marrom-escuro);
+}
+
+article.post:last-of-type {
+    border-bottom: none;
+}
+
+.site-footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--cor-marrom-escuro);
+    border-top: 3px solid var(--cor-vermelho-escuro);
+    color: var(--cor-branco);
+}
