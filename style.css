@@ -49,6 +49,22 @@ p {
     line-height: 1.65em;
 }
 
+.site-nav .menu ul li {
+    margin: 0;
+    list-style: none;
+    color: var(--cor-branco);
+    padding: 0.25rem 0;
+}
+
+.site-nav .menu ul li a {
+    color: var(--cor-branco);
+}
+
+.site-nav .menu ul li a:hover {
+    color: var(--cor-verde-escuro);
+    cursor: pointer;
+}
+
 /* General Layout */
 main.container {
     max-width: 920px;
