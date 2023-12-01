@@ -5,6 +5,7 @@ Autor URL: https://quitinomedeiros.com.br
 Version 1.0
 */
 
+/* Variáveis */
 :root {
     --cor-vermelho-escuro: #220C10;
     --cor-marrom-escuro: #574144;
@@ -19,25 +20,24 @@ Version 1.0
     --cor-preto:#181300;
     --cor-rosa-claro: #FFF5F7;
     --cor-branco: #FFF;
+
+    --cor-verde-camara-claro: #2F7958;
+    --cor-verde-camara-medio: #17583B;
+    --cor-verde-camara-escuro: #004A2F;
 }
 
+/* Estilos gerais */
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'gotham-book';
     font-size: 1rem;
     color: var(--cor-preto);
-}
-
-.site-header {
-    background-color: var(--cor-marrom-claro);
-    margin: 0;
-    padding: 1rem;
-    border-bottom: 3px solid var(--cor-vermelho-escuro);
 }
 
 a:link,
 a:visited {
     color: var(--cor-azul-medio);
     text-decoration: none;
+    list-style: none;
 }
 
 a:hover {
@@ -49,27 +49,101 @@ p {
     line-height: 1.65em;
 }
 
-.site-nav .menu ul li {
+/* Menus de Navegação */
+.site-nav {
+    margin: 0 3rem;
+}
+
+.site-nav ul {
     margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.site-nav ul li {
     list-style: none;
-    color: var(--cor-branco);
-    padding: 0.25rem 0;
 }
 
-.site-nav .menu ul li a {
-    color: var(--cor-branco);
+/* Menu do Topo site */
+.site-header {
+    background-color: var(--cor-verde-camara-claro);
+    margin: 0;
+    padding: 1rem 2rem;
 }
 
-.site-nav .menu ul li a:hover {
-    color: var(--cor-verde-escuro);
+.site-header .menu-links {
+    max-width: 1800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-camara img {
+    width: 280px;
+}
+
+.site-header .menu-links h1 a, .site-header .menu-links .site-nav ul li a {
+    color: var(--cor-branco);
+    padding: 18px;
+}
+
+.site-header .menu-links h1 a:hover, .site-header .menu-links .site-nav ul li a:hover {
+    background-color: var(--cor-verde-camara-escuro);
     cursor: pointer;
 }
 
-/* General Layout */
+/* Estilo conteúdo principal */
+#primary-inicial {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 1rem;
+}
+
+.content-inicial {
+    width: 75%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.category-card {
+    margin-bottom: 30px;
+    border: 1px solid var(--cor-azul-claro);
+    padding: 0.5rem 1rem;
+    border-radius: 0.75rem;
+
+}
+
+.category-card h2 {
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.category-card ol {
+    list-style-type: decimal;
+    padding: 0 1rem 0 2rem;
+}
+
+.category-card ol li {
+    margin: 0.5rem 0;
+}
+
+.category-card ol li a:hover {
+    color: var(--cor-verde-camara-escuro);
+    border-bottom: 1px solid var(--cor-verde-camara-escuro);
+    cursor: pointer;
+}
+
 main.container {
-    max-width: 920px;
+    max-width: 1800px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+article.page h2 {
+    font-size: 3rem;
 }
 
 article.post {
@@ -81,10 +155,287 @@ article.post:last-of-type {
     border-bottom: none;
 }
 
+/* Estilo rodapé */
 .site-footer {
+    max-width: 1800px;
     text-align: center;
-    padding: 1rem;
-    background-color: var(--cor-marrom-escuro);
-    border-top: 3px solid var(--cor-vermelho-escuro);
     color: var(--cor-branco);
+}
+
+.footer-content {
+    width: 100vw;
+    background-color: var(--cor-verde-camara-medio);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    padding: 1rem;
+}
+
+.footer-nav-div {
+    margin: auto 0;
+}
+
+ul#menu-footer-menu-link {
+    display: block;
+}
+
+ul#menu-footer-menu-link li {
+    margin: 2rem 0;
+}
+
+.site-footer nav ul li a {
+    color: var(--cor-branco);
+    border-bottom: none;
+    padding: 18px;
+}
+
+.site-footer nav ul li a:hover {
+   padding-bottom: 4px;
+   border-bottom: 2px solid var(--cor-branco);
+}
+
+.footer-endereco p {
+    line-height: 18px;
+}
+
+.footer-redes-cefor a {
+    margin: 0 1rem;
+}
+
+.footer-redes-cefor a:hover {
+    background-color: var(--cor-verde-camara-claro);
+    padding: 2rem 0.5rem 0.5rem 0.5rem;
+}
+
+.footer-direitos {
+    width: 100vw;
+    background-color: var(--cor-verde-camara-escuro);
+    margin: 0;
+    min-height: 4rem;
+    padding: 2rem 0;
+    font-size: 0.75rem;
+}
+
+/* Menu lateral */
+.sidebar {
+    max-width: 20rem;
+    background-color: var(--cor-rosa-claro);
+    padding: 20px;
+    font-family: 'gotham-book';
+    font-weight: 600;
+}
+
+.category-menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.category-menu li {
+    margin-bottom: 10px;
+}
+
+/* Estilos para o menu de hambúrguer */
+.menu-toggle {
+    display: none;
+}
+
+/* Estilo Responsividade */
+@media screen and (max-width: 768px) {
+    #primary-inicial {
+        display: flex;
+        margin: 0.5rem;
+        word-wrap: break-word;
+    }
+
+    .site-header {
+        padding: 0;
+        margin: 0;
+    }
+
+    .site-header .menu-links {
+        display: block;
+        text-align: center;
+    }
+
+    .site-header .menu-links img {
+        margin: 1rem;
+    }
+
+    .site-header .menu-links h1 {
+        margin: 0;
+    }
+
+    .site-header .menu-links .site-nav {
+        margin: 0 auto;
+        padding: 0;
+    }
+    
+    .site-header .menu-links .site-nav .menu-header-menu-link-container {
+        margin: 0.25rem;
+        padding: 0;
+    }
+
+    .menu-links .site-nav ul li {
+        margin: 1rem auto;
+    }
+    
+    .sidebar .menu-toggle {
+        display: block;
+        cursor: pointer;
+        color: var(--cor-azul-escuro);
+        
+    }
+
+    .sidebar {
+        margin: 0;
+    }
+
+    .sidebar .category-menu ul li::before {
+        list-style-type: "&#x21F0;";
+    }
+
+    .category-menu {
+        display: none;
+    }
+
+    .category-menu.active {
+        display: block;
+    }
+
+    .category-menu li {
+        margin-bottom: 5px;
+        font-size: 0.75rem;
+    }
+
+    .category-menu .sub-menu li {
+        margin-left: -1rem;
+    }
+
+    .content-inicial {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        display: block;
+        max-width: 95%;
+    }
+
+    .footer-endereco,  .footer-redes-cefor {
+        margin: 1rem;
+    }
+
+    .footer-direitos {
+        width: 100vw;
+    }
+}
+
+/* Família de Fontes - Gotham */
+@font-face {
+    font-family: 'gotham-light';
+    src: url('http://localhost/LearningWordPress/wp-content/themes/LearningWordPress/fonts/Gotham-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+  
+@font-face {
+    font-family: 'gotham-light-italic';
+    src: url('http://localhost/LearningWordPress/wp-content/themes/LearningWordPress/fonts/Gotham-LightItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+  
+@font-face {
+    font-family: 'gotham-medium';
+    src: url('http://localhost/LearningWordPress/wp-content/themes/LearningWordPress/fonts/Gotham-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+  
+@font-face {
+    font-family: 'gotham-medium-italic';
+    src: url('http://localhost/LearningWordPress/wp-content/themes/LearningWordPress/fonts/Gotham-MediumItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+  
+@font-face {
+    font-family: 'gotham-thin';
+    src: url('http://localhost/LearningWordPress/wp-content/themes/LearningWordPress/fonts/Gotham-Thin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+  
+@font-face {
+    font-family: 'gotham-thin-italic';
+    src: url('http://localhost/LearningWordPress/wp-content/themes/LearningWordPress/fonts/Gotham-ThinItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+  
+@font-face {
+    font-family: 'gotham-ultra';
+    src: url('http://localhost/LearningWordPress/wp-content/themes/LearningWordPress/fonts/Gotham-Ultra.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+  
+@font-face {
+    font-family: 'gotham-ultra-italic';
+    src: url('http://localhost/LearningWordPress/wp-content/themes/LearningWordPress/fonts/Gotham-UltraItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+  
+@font-face {
+    font-family: 'gotham-xlight';
+    src: url('http://localhost/LearningWordPress/wp-content/themes/LearningWordPress/fonts/Gotham-XLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+  
+@font-face {
+    font-family: 'gotham-xlight-italic';
+    src: url('http://localhost/LearningWordPress/wp-content/themes/LearningWordPress/fonts/Gotham-XLightItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+  
+@font-face {
+    font-family: 'gotham-black';
+    src: url('http://localhost/LearningWordPress/wp-content/themes/LearningWordPress/fonts/Gotham-Black.ttf') format('truetype');
+}
+  
+@font-face {
+    font-family: 'gotham-black-italic';
+    src: url('http://localhost/LearningWordPress/wp-content/themes/LearningWordPress/fonts/Gotham-BlackItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+  
+@font-face {
+    font-family: 'gotham-bold';
+    src: url('http://localhost/LearningWordPress/wp-content/themes/LearningWordPress/fonts/Gotham-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+  
+@font-face {
+    font-family: 'gotham-bold-italic';
+    src: url('http://localhost/LearningWordPress/wp-content/themes/LearningWordPress/fonts/Gotham-BoldItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+  
+@font-face {
+    font-family: 'gotham-book';
+    src: url('http://localhost/LearningWordPress/wp-content/themes/LearningWordPress/fonts/Gotham-Book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+  
+@font-face {
+    font-family: 'gotham-book-italic';
+    src: url('http://localhost/LearningWordPress/wp-content/themes/LearningWordPress/fonts/Gotham-BookItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
 }
